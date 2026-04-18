@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +11,8 @@ public class Main {
         Reiziger reiziger = new Reiziger(input.nextLine());
 
         reiziger.setKaart(automaat.nummerGenereren());
-        System.out.println("Hallo " + reiziger.getNaam() + ", uw nieuwe kaart " + reiziger.getKaart().getKaartNummer() + " is klaar.");
+        System.out.println("Hallo " + reiziger.getNaam() + ", uw nieuwe kaart " + reiziger.getKaart().getKaartNummer()
+                + " is klaar.");
 
         boolean doorgaan = true;
         while (doorgaan) {
@@ -34,8 +34,8 @@ public class Main {
                     reiziger.getKaart().checkIn(automaat.kiesStation("inchecken"));
                     break;
                 case 3:
-                   reiziger.getKaart().checkUit(automaat.kiesStation("uitchecken"));
-                   break;
+                    reiziger.getKaart().checkUit(automaat.kiesStation("uitchecken"));
+                    break;
                 case 4:
                     reiziger.getKaart().toonGeschiedenis();
                     break;
